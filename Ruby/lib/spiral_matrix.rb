@@ -1,17 +1,34 @@
 class Algorithms::SpiralMatrix
   attr_accessor :n, :hash, :cell, :cells_filled
 
+  def self.hash(n)
+    instance = new
+    instance.n = n
+    instance.fill_hash
+    instance.hash
+  end
+
+  def self.json(n)
+    hash = self.hash(n)
+    hash.to_json
+  end
+
+  def self.export_json(n, filepath)
+    hash = self.hash(n)
+    Algorithms::Export.json(hash, filepath)
+  end
+
   def run
     puts "~Spiral matrix~\n\n"
     puts '> Give me a number!'
     print '>> '
     self.n = Integer(gets.strip)
-    make_hash_frame
     fill_hash
     print_hash
   end
 
   def fill_hash
+    make_hash_frame
     self.cell = { row: 0, column: 0 }
     self.cells_filled = 0
     fill_cell
@@ -45,11 +62,6 @@ class Algorithms::SpiralMatrix
 
   def max_digits
     @max_digits ||= digits(n**2)
-  end
-
-  def integer_with_spacing(integer)
-    spaces = ' ' * (max_digits - digits(integer))
-    "#{integer}#{spaces}"
   end
 
   def make_hash_frame
@@ -90,5 +102,10 @@ class Algorithms::SpiralMatrix
     else
       cell[:row] -= 1
     end
+  end
+
+  def integer_with_spacing(integer)
+    spaces = ' ' * (max_digits - digits(integer))
+    "#{integer}#{spaces}"
   end
 end
