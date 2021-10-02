@@ -2,4 +2,4 @@
 
 require_relative '../config/environment'
 
-Algorithms::SpiralMatrix.new.run
+Algorithms::Menu.new.run

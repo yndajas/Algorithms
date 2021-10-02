@@ -2,7 +2,9 @@ class Algorithms::SpiralMatrix
   attr_accessor :n, :max_digits, :hash, :cell, :cells_filled
 
   def run
-    puts 'Give me a number!'
+    puts "~Spiral matrix~\n\n"
+    puts '> Give me a number!'
+    print '>> '
     self.n = Integer(gets.strip)
     self.max_digits = digits(n**2)
     make_hash_frame
