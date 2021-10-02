@@ -1,0 +1,5 @@
+source "https://rubygems.org"
+
+gem 'require_all' # for requiring all lib files in one command
+gem 'json' # for exporting to JSON
+gem 'pry' # for testing
