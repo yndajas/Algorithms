@@ -1,9 +1,10 @@
 class Algorithms::SpiralMatrix
-  attr_accessor :n, :hash, :cell, :cells_filled
+  attr_accessor :n, :max_digits, :hash, :cell, :cells_filled
 
   def run
     puts 'Give me a number!'
     self.n = Integer(gets.strip)
+    self.max_digits = digits(n**2)
     make_hash_frame
     fill_hash
     print_hash
@@ -23,10 +24,28 @@ class Algorithms::SpiralMatrix
   end
 
   def print_hash
-    hash.each { |row| puts row.join(' ') }
+    puts
+    hash.each do |row|
+      puts row.collect { |integer| integer_with_spacing(integer) }.join(' ')
+    end
   end
 
   private
+
+  def digits(n = self.n)
+    working = n
+    digits = 0
+    until working < 1
+      digits += 1
+      working /= 10
+    end
+    digits
+  end
+
+  def integer_with_spacing(integer)
+    spaces = ' ' * (max_digits - digits(integer))
+    "#{integer}#{spaces}"
+  end
 
   def make_hash_frame
     self.hash = Array.new(n).collect { |_array| Array.new(n) }
