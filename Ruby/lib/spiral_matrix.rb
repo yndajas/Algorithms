@@ -1,12 +1,11 @@
 class Algorithms::SpiralMatrix
-  attr_accessor :n, :max_digits, :hash, :cell, :cells_filled
+  attr_accessor :n, :hash, :cell, :cells_filled
 
   def run
     puts "~Spiral matrix~\n\n"
     puts '> Give me a number!'
     print '>> '
     self.n = Integer(gets.strip)
-    self.max_digits = digits(n**2)
     make_hash_frame
     fill_hash
     print_hash
@@ -42,6 +41,10 @@ class Algorithms::SpiralMatrix
       working /= 10
     end
     digits
+  end
+
+  def max_digits
+    @max_digits ||= digits(n**2)
   end
 
   def integer_with_spacing(integer)
