@@ -28,14 +28,7 @@ class Algorithms::SpiralMatrix
     self.n = Integer(gets.strip)
     fill_hash
     print_hash
-    puts 'Export to JSON? (y/n)'
-    export = %w[yes no y n].include?(gets.strip)
-    if export
-      puts "\nEnter a filepath (including filename)"
-      filepath = gets.strip
-      Algorithms::Export.json(hash, filepath)
-      puts "\nFile successfully exported to \"#{filepath}\"\n"
-    end
+    offer_export
   end
 
   def fill_hash
@@ -119,5 +112,17 @@ class Algorithms::SpiralMatrix
   def integer_with_spacing(integer)
     spaces = ' ' * (max_digits - digits(integer))
     "#{integer}#{spaces}"
+  end
+
+  def offer_export
+    puts 'Export to JSON? (y/n)'
+    export = ''
+    export = gets.strip until %w[yes no y n].include?(export)
+    if %w[yes y].include?(export)
+      puts "\nEnter a filepath (including filename)"
+      filepath = gets.strip
+      Algorithms::Export.json(hash, filepath)
+      puts "\nFile successfully exported to \"#{filepath}\"\n"
+    end
   end
 end
