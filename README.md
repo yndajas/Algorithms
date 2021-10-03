@@ -12,8 +12,8 @@ A collection of algorithms implmented in Ruby and/or JavaScript. You can:
 
 Populate a matrix of size n x n with the numbers 1 to n in a clockwise inward spiral fashion. E.g. if n = 3:
 
-1 2 3
-8 9 4
+1 2 3<br/>
+8 9 4<br/>
 7 6 5
 
 ## Installation
