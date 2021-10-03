@@ -42,7 +42,7 @@ To use the command-line interface, which includes a menu of all algorithms:
 
 Path: `algorithms/Ruby/lib/spiral_matrix.rb`
 
-#### Class methods
+###### Class methods
 
 - `Algorithms::SpiralMatrix.hash(n)`
 - `Algorithms::SpiralMatrix.json(n)`
