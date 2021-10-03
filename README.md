@@ -1,6 +1,10 @@
 # algorithms
 
-A collection of algorithms implmented in Ruby and/or JavaScript - print the output in a terminal and/or export it to JSON.
+A collection of algorithms implmented in Ruby and/or JavaScript. You can:
+
+- use the algorithms via a command-line interface
+- include them in other Ruby apps
+- export output to JSON (both via the command-line interface and when included in other apps)
 
 ## Features
 
