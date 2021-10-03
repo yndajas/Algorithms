@@ -40,7 +40,7 @@ To use the command-line interface, which includes a menu of all algorithms:
 
 ##### Spiral matrix
 
-Path: `algorithms/Ruby/lib/spiral_matrix.rb`
+Path: `Algorithms/Ruby/lib/spiral_matrix.rb`
 
 ###### Class methods
 
@@ -52,7 +52,7 @@ Replace `n` with a number and, where applicable, `filepath` with the full filepa
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at [https://github.com/yndajas/algorithms](https://github.com/yndajas/algorithms).
+Bug reports and pull requests are welcome on GitHub at [https://github.com/yndajas/Algorithms](https://github.com/yndajas/Algorithms).
 
 ## Licence
 
