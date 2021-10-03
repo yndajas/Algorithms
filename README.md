@@ -32,7 +32,7 @@ Install Ruby ([help](https://www.ruby-lang.org/en/documentation/installation)</a
 
 To use the command-line interface, which includes a menu of all algorithms:
 
-`bin/start` from within the `Ruby` directory (on Windows, you may need to run `ruby bin/start`)
+`ruby bin/start` from within the `Ruby` directory (`bin/start` may work depending on your operating system)
 
 #### Via another Ruby app
 
