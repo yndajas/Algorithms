@@ -1,4 +1,4 @@
-class Algorithms::Menu
+class Algorithms::CLI
   def run
     puts "Welcome to algorithms!\n\n"
     choice = ''
