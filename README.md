@@ -1,4 +1,4 @@
-# algorithms
+# Algorithms
 
 A collection of algorithms implemented in Ruby and/or JavaScript. You can:
 
