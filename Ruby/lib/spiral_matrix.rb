@@ -1,3 +1,6 @@
+require_relative '../config/environment'
+require_relative 'export'
+
 class Algorithms::SpiralMatrix
   attr_accessor :n, :hash, :cell, :cells_filled
 
@@ -25,6 +28,14 @@ class Algorithms::SpiralMatrix
     self.n = Integer(gets.strip)
     fill_hash
     print_hash
+    puts 'Export to JSON? (y/n)'
+    export = %w[yes no y n].include?(gets.strip)
+    if export
+      puts "\nEnter a filepath (including filename)"
+      filepath = gets.strip
+      Algorithms::Export.json(hash, filepath)
+      puts "\nFile successfully exported to \"#{filepath}\"\n"
+    end
   end
 
   def fill_hash
@@ -46,6 +57,7 @@ class Algorithms::SpiralMatrix
     hash.each do |row|
       puts row.collect { |integer| integer_with_spacing(integer) }.join(' ')
     end
+    puts
   end
 
   private
