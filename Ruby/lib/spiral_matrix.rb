@@ -28,8 +28,10 @@ class Algorithms::SpiralMatrix
     self.n = Integer(gets.strip)
     fill_hash
     print_hash
-    offer_export
+    Algorithms::Export.offer_export(hash)
   end
+
+  private
 
   def fill_hash
     make_hash_frame
@@ -52,8 +54,6 @@ class Algorithms::SpiralMatrix
     end
     puts
   end
-
-  private
 
   def digits(n = self.n)
     working = n
@@ -114,15 +114,15 @@ class Algorithms::SpiralMatrix
     "#{integer}#{spaces}"
   end
 
-  def offer_export
-    puts 'Export to JSON? (y/n)'
-    export = ''
-    export = gets.strip until %w[yes no y n].include?(export)
-    if %w[yes y].include?(export)
-      puts "\nEnter a filepath (including filename)"
-      filepath = gets.strip
-      Algorithms::Export.json(hash, filepath)
-      puts "\nFile successfully exported to \"#{filepath}\"\n"
-    end
-  end
+  # def offer_export
+  #   puts 'Export to JSON? (y/n)'
+  #   export = ''
+  #   export = gets.strip until %w[yes no y n].include?(export)
+  #   if %w[yes y].include?(export)
+  #     puts "\nEnter a filepath (including filename)"
+  #     filepath = gets.strip
+  #     Algorithms::Export.json(hash, filepath)
+  #     puts "\nFile successfully exported to \"#{filepath}\"\n"
+  #   end
+  # end
 end
