@@ -23,15 +23,23 @@ class Algorithms::SpiralMatrix
 
   def run
     puts "~Spiral matrix~\n\n"
-    puts '> Give me a number!'
-    print '>> '
-    self.n = Integer(gets.strip)
+    puts '> Give me a number (>0)!'
+    set_n
     fill_hash
     print_hash
     Algorithms::Export.offer_export(hash)
   end
 
   private
+
+  def set_n
+    self.n = 0
+    until n > 0
+      print '>> '
+      input = gets.strip
+      self.n = Integer(input) if input.length > 0 && input == input.gsub(/[^0-9]/, '')
+    end
+  end
 
   def fill_hash
     make_hash_frame
