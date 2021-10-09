@@ -24,14 +24,21 @@ class Algorithms::FirstUniqueCharacter
   def run
     puts "~First unique character~\n\n"
     puts '> Give me a string (using only a-z)!'
-    print '>> '
-    self.string = gets.strip.downcase.gsub(/[^a-z]/, '')
+    set_string
     find_first_unique_character
     print_first_unique_character
     Algorithms::Export.offer_export(first_unique_character)
   end
 
   private
+
+  def set_string
+    self.string = ''
+    until string.length > 0
+      print '>> '
+      self.string = gets.strip.downcase.gsub(/[^a-z]/, '')
+    end
+  end
 
   def find_first_unique_character
     self.character_hash = {}
@@ -44,7 +51,7 @@ class Algorithms::FirstUniqueCharacter
     found = false
     character_index = 0
 
-    until found || character_index == string.length - 1
+    until found || character_index == string.length
       if character_hash[string[character_index]] == 1
         self.first_unique_character = string[character_index]
         found = true
