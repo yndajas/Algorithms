@@ -8,6 +8,10 @@ A collection of algorithms implemented in Ruby and/or JavaScript. You can:
 
 ## Features
 
+### First unqiue character
+
+Find the first unique (non-repeating) character in a string. A-Z will be converted to a-z; all other characters will be ignored. E.g. "b" if the string is "aaabccc", or "r" if the string is "Esperanza Spalding".
+
 ### Spiral matrix
 
 Populate a matrix of size n x n with the numbers 1 to n in a clockwise inward spiral fashion. E.g. if n = 3:
@@ -37,6 +41,18 @@ To use the command-line interface, which includes a menu of all algorithms:
 #### Via another Ruby app
 
 - add `require 'pathToFile'` to the top section of a Ruby file, replacing 'pathToFile' with the full path to the file specified in the relevant section below (you could also use `require_relative` and provide a relative path)
+
+##### First unique character
+
+Path: `Algorithms/Ruby/lib/first_unique_character.rb`
+
+###### Class methods
+
+- `Algorithms::FirstUniqueCharacter.character(string)`
+- `Algorithms::FirstUniqueCharacter.json(string)`
+- `Algorithms::FirstUniqueCharacter.export_json(string, filepath)`
+
+Replace `string` with a string and, where applicable, `filepath` with the full filepath (including filename) of where you want the exported JSON file to go.
 
 ##### Spiral matrix
 
