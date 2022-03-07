@@ -1,18 +1,30 @@
 # Algorithms
 
-A collection of algorithms implemented in Ruby and/or JavaScript. You can:
+A collection of algorithms implemented in Ruby and/or JavaScript.
+
+For Ruby implementations, you can:
 
 - use the algorithms via a command-line interface
-- include them in other Ruby apps
+- include them in Ruby apps (where written in Ruby)
 - export output to JSON (both via the command-line interface and when included in other apps)
 
 ## Features
 
-### First unqiue character
+### Anagram
+
+<b>Implementations:</b> JavaScript
+
+Check if two strings containing only the characters a-z (lower case alphabetical) are anagrams of each other. Strings that are identical are not considered anagrams. E.g. "tool" and "loot" are anagrams, while "tool" and "fool" are not, and neither are "tool and "tool".
+
+### First unique character
+
+<b>Implementations:</b> Ruby
 
 Find the first unique (non-repeating) character in a string. A-Z will be converted to a-z; all other characters will be ignored. E.g. "b" if the string is "aaabccc", or "r" if the string is "Esperanza Spalding".
 
 ### Spiral matrix
+
+<b>Implementations:</b> Ruby
 
 Populate a matrix of size n x n with the numbers 1 to n in a clockwise inward spiral fashion. E.g. if n = 3:
 
@@ -22,13 +34,25 @@ Populate a matrix of size n x n with the numbers 1 to n in a clockwise inward sp
 
 ## Installation
 
-Install Ruby ([help](https://www.ruby-lang.org/en/documentation/installation)</a>), then in a terminal:
+For Ruby implementations, install Ruby ([help](https://www.ruby-lang.org/en/documentation/installation)</a>), then in a terminal:
 
 1. `gem install bundler`
 2. `cd Ruby` from within the repository
 3. `bundle`
 
+<i>Javascript installation instructions to follow.</i>
+
 ## Usage
+
+### JavaScript
+
+For now, JavaScript implementations are simply provided as a default export function in a dedicated file per algorithm. You can use these files in an app or copy the function to use within another file.
+
+#### Anagram
+
+- `anagram(stringOne, stringTwo)`
+
+Replace `stringOne` and `stringTwo` with the two strings you'd like to compare.
 
 ### Ruby
 
@@ -60,11 +84,11 @@ Path: `Algorithms/Ruby/lib/spiral_matrix.rb`
 
 ###### Class methods
 
-- `Algorithms::SpiralMatrix.hash(n)`
-- `Algorithms::SpiralMatrix.json(n)`
-- `Algorithms::SpiralMatrix.export_json(n, filepath)`
+- `Algorithms::SpiralMatrix.hash(number)`
+- `Algorithms::SpiralMatrix.json(number)`
+- `Algorithms::SpiralMatrix.export_json(number, filepath)`
 
-Replace `n` with a number and, where applicable, `filepath` with the full filepath (including filename) of where you want the exported JSON file to go.
+Replace `number` with a number and, where applicable, `filepath` with the full filepath (including filename) of where you want the exported JSON file to go.
 
 ## Contributing
 
