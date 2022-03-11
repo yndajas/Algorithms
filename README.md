@@ -16,6 +16,12 @@ For Ruby implementations, you can:
 
 Check if two strings containing only the characters a-z (lower case alphabetical) are anagrams of each other. Strings that are identical are not considered anagrams. E.g. "tool" and "loot" are anagrams, while "tool" and "fool" are not, and neither are "tool and "tool".
 
+### Count unique values
+
+<b>Implementations:</b> JavaScript
+
+Count the number of unique values in an array. E.g. [1, 2, 4] would return 3, [1, 2, 2, 2, 1] would return 2 and [1, 2, "2", 3] would return 4. 
+
 ### First unique character
 
 <b>Implementations:</b> Ruby
@@ -53,6 +59,12 @@ For now, JavaScript implementations are simply provided as a default export func
 - `anagram(stringOne, stringTwo)`
 
 Replace `stringOne` and `stringTwo` with the two strings you'd like to compare.
+
+#### Count unique values
+
+- `countUniqueValues(array)`
+
+Replace `array` with an array of values.
 
 ### Ruby
 
