@@ -20,7 +20,7 @@ Check if two strings containing only the characters a-z (lower case alphabetical
 
 <b>Implementations:</b> JavaScript
 
-Print a chessboard (using "#" and "_" to represent black and white cells) in the console. Optioanlly customise board size and the strings that appear in alternating cells.
+Build a string representing a chessboard (using "#" and "_" to represent black and white cells). Optioanlly customise board size and the strings that appear in alternating cells. By default, the string will be returned, but it can instead be printed directly.
 
 ### Count unique values
 
@@ -68,9 +68,17 @@ Replace `stringOne` and `stringTwo` with the two strings you'd like to compare.
 
 #### Chessboard
 
+Return:
+
 - `chessboard()`
 - `chessboard(number)`
 - `chessboard(number, {1: stringOne, 2: stringTwo})`
+
+Print (log to console):
+
+- `printChessboard()`
+- `printChessboard(number)`
+- `printChessboard(number, {1: stringOne, 2: stringTwo})`
 
 Replace `number` with a number to customise the board size, and `stringOne` and `stringTwo` to customise the strings that appear in alternating cells.
 

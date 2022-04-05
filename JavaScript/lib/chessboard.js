@@ -1,3 +1,6 @@
+// set default size
+const defaultSize = 8
+
 // set default cell strings
 const defaultCells = {
   0: '_',
@@ -5,7 +8,7 @@ const defaultCells = {
 }
 
 // time complexity: O(3n), or simply O(n)
-export const chessboard = (size = 8, cells = defaultCells) => {
+export const chessboard = (size = defaultSize, cells = defaultCells) => {
   // create strings to contain representations of even and odd row types
   const rows = {
     0: '',
@@ -38,12 +41,17 @@ export const chessboard = (size = 8, cells = defaultCells) => {
     }
   }
 
-  // print the board
+  // return the board
+  return board
+}
+
+export const printChessboard = (size = defaultSize, cells = defaultCells) => {
+  const board = chessboard(size, cells)
   console.log(board)
 }
 
 // time complexity: O(n²)
-export const chessboardNSquared = (size = 8, cells = defaultCells) => {
+export const chessboardNSquared = (size = defaultSize, cells = defaultCells) => {
   // create a string representing the full board
   let board = ''
 
@@ -69,8 +77,8 @@ export const chessboardNSquared = (size = 8, cells = defaultCells) => {
     }
   }
 
-  // print the board
-  console.log(board)
+  // return the board
+  return board
 }
 
 export default chessboard
