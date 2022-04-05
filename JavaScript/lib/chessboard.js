@@ -1,6 +1,6 @@
 // time complexity: O(3n), or simply O(n)
 export const chessboard = (size = 8) => {
-   // record cell types
+   // create strings representing cell types
    const cells = {
     0: "_",
     1: "#"
@@ -23,24 +23,39 @@ export const chessboard = (size = 8) => {
     }
   })
 
+  // create a string representing the full board
+  let board = ""
+
   // for each row
   for (let row = 0; row < size; row++) {
-    // log the row type corresponding to the row index's parity (odd/even)
-    console.log(rows[row % 2])
+    // add the row type corresponding to the row index's parity (odd/even)
+    // to the board string
+    board += (rows[row % 2])
+ 
+    // unless this is the last row, add a new line character
+    if (row < size - 1) {
+      board += "\n"
+    }
   }
+
+  // print the board
+  console.log(board)
 }
 
 // time complexity: O(n²)
 export const chessboardNSquared = (size = 8) => {
-  // record cell types
-  const cells = {
+   // create strings representing cell types
+   const cells = {
     0: "_",
     1: "#"
   }
 
+  // create a string representing the full board
+  let board = ""
+
   // for each row
   for (let row = 0; row < size; row++) {
-    // create a string
+    // create a string representing the row
     let rowText = ""
 
     // for each cell in the row
@@ -51,9 +66,17 @@ export const chessboardNSquared = (size = 8) => {
       rowText += cells[(row + column) % 2]
     }
 
-    // log the resulting row text
-    console.log(rowText)
+    // add the row string to the board string
+    board += rowText
+
+    // unless this is the last row, add a new line character
+    if (row < size - 1) {
+      board += "\n"
+    }
   }
+
+  // print the board
+  console.log(board)
 }
 
 export default chessboard
