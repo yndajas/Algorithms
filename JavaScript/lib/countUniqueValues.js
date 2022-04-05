@@ -1,4 +1,4 @@
-export default const countUniqueValues = (values) => {
+const countUniqueValues = (values) => {
   // sort the value and declare a variable to store last unique value
   const sortedValues = values.sort()
   let lastUniqueValue
@@ -13,3 +13,5 @@ export default const countUniqueValues = (values) => {
     return uniqueValueCount
   }, 0)
 }
+
+export default countUniqueValues

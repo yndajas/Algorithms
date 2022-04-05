@@ -1,4 +1,4 @@
-export default const anagram = (stringOne, stringTwo) => {
+const anagram = (stringOne, stringTwo) => {
   // return false if strings are identical
   if (stringOne === stringTwo) {
     return false
@@ -24,3 +24,5 @@ export default const anagram = (stringOne, stringTwo) => {
     return counts[0][character] === counts[1][character]
   })
 }
+
+export default anagram
