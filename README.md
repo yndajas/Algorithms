@@ -1,6 +1,6 @@
 # Algorithms
 
-A collection of algorithms implemented in Ruby and/or JavaScript.
+A collection of algorithms implemented in JavaScript and/or Ruby.
 
 For Ruby implementations, you can:
 
@@ -16,11 +16,17 @@ For Ruby implementations, you can:
 
 Check if two strings containing only the characters a-z (lower case alphabetical) are anagrams of each other. Strings that are identical are not considered anagrams. E.g. "tool" and "loot" are anagrams, while "tool" and "fool" are not, and neither are "tool and "tool".
 
+### Chessboard
+
+<b>Implementations:</b> JavaScript
+
+Print a chessboard (using "#" and "_" to represent black and white cells) in the console, optionally of a custom size.
+
 ### Count unique values
 
 <b>Implementations:</b> JavaScript
 
-Count the number of unique values in an array. E.g. [1, 2, 4] would return 3, [1, 2, 2, 2, 1] would return 2 and [1, 2, "2", 3] would return 4. 
+Count the number of unique values in an array. E.g. [1, 2, 4] would return 3, [1, 2, 2, 2, 1] would return 2 and [1, 2, "2", 3] would return 4.
 
 ### First unique character
 
@@ -52,13 +58,20 @@ For Ruby implementations, install Ruby ([help](https://www.ruby-lang.org/en/docu
 
 ### JavaScript
 
-For now, JavaScript implementations are simply provided as a default export function in a dedicated file per algorithm. You can use these files in an app or copy the function to use within another file.
+For now, JavaScript implementations are simply provided as exported functions in a dedicated file per algorithm. You can use these files in an app or copy the function to use within another file.
 
 #### Anagram
 
 - `anagram(stringOne, stringTwo)`
 
 Replace `stringOne` and `stringTwo` with the two strings you'd like to compare.
+
+#### Chessboard
+
+- `chessboard()`
+- `chessboard(number)`
+
+Replace `number` with a number to print a custom-sized board.
 
 #### Count unique values
 
